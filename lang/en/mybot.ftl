@@ -1,0 +1,111 @@
+uk = Українська { $flag }
+en = English { $flag }
+pl = Polska { $flag }
+it = Italiano { $flag }
+select_language = Select language:
+the_language_has_been_changed = The language has been changed
+
+add_bot_to_group = Add bot to group
+start_message = Hello { $user }, there are mini games here that you can play! To play, look in the 'Menu' tab.{ $nl }Add me to a group of friends! More fun together!
+help_message = If you have any questions about what I'm doing, write to @C1PL3R_admin.{ $nl }If you're not in the top, send the /top command (only in groups)!
+
+finish_game_cross = You are a cross! Finish the game!!
+finish_game_zero = You circle! Finish the game!!
+choose_who_you_will_be = Choose who you will be?
+lose_text = Oops, computer 🤖 won. Play 😉 more /tictactoe!
+win_text = The victory is yours, congratulations 😉 🥳!
+tictactoe_game = Tic Tac Toe Game
+its_not_your_turn_now = It's not your turn now!
+this_cell_is_full = This cell is full!
+you_are_a_cross = You are a cross!
+you_are_a_zero = You are a circle!
+
+guess_number_start_text = Hello { $user } in this game you need to enter a number from <b><u>1 to 100</u></b> and try to guess the number I guessed 😄. There is a /stop command to stop the game
+text_after_guess_number_start_text = I already guessed the number! Write the number you think I guessed, and I'll tell you if it's the same or more or less!
+answer = Your answer is <code>{ $secret_number }</code>
+text_win_guess_number = You have won!! The game is over. To start over, enter /guess_number
+number_is_more = Your number is more than secret!
+number_is_less = Your number is less than secret!
+enter_a_number = Enter a number!
+game_is_over = The game is over, to start again type /play!
+select_game = Want to try your luck! Choose a game
+click_on_game = Click on the game, it will be sent to me 😉
+
+basketball_game = 🏀 Basketball 🏀
+football_game = ⚽ Football ⚽
+dice_game = 🎲 Dice 🎲
+dart_game = 🎯 Dart 🎯
+casino_game = 🎰 Casino 🎰
+bowling_game = 🎳 Bowling 🎳
+bas = Basketball
+foot = Football
+dice = Dice
+dart = Dart
+bow = Bowling
+casino = Casino
+back = ⬅️ Back ⬅️
+win_text_dice = You won 🤩🥳! And you get { $total_score} stars ⭐
+lose_text_dice = You lost 😢 so I take 1 star ⭐
+draw_text_dice = Draws, I'm your stars ⭐ I don't move, but so far ha ha ha 😆
+not_enough_stars = Not enough stars to start the game you must have more than 1 star ⭐
+bas_title = Game 'Basketball'
+bas_desc = The game "Basketball" is a very interesting game where you can try your luck in basketball!
+foot_title = Game 'Football'
+foot_desc = The game "Football" is a very interesting game where you can try your luck in football!
+dice_title = Game 'Dice'
+dice_desc = The game "Dice" is a very interesting game where you can test your luck in dice!
+dart_title = Game 'Darts'
+dart_desc = The game "Darts" is a very interesting game where you can try your luck at darts!
+bow_title = Game 'Bowling'
+bow_desc = The game "Bowling" is a very interesting game where you can try your luck in bowling!
+casino_title = Game 'Casino'
+casino_desc = The game "Casino" is a very interesting game where you can try your luck in the casino!
+
+score_text = Your stars ⭐: { $score }{ $nl }Function x2 stars: { $text }
+premium_stars_text = Your premium stars: { $premium_stars } 🌟
+not_premium_account = Your account is not Premium 🌟 activate it /buy
+bought = Bought!
+not_bought = Not bought! Buy from /shop
+sented_scores = A kind soul sent you stars 😇
+
+shop_message = Hello, this is a shop here you can buy hints... let's see what's here:{ $nl }{ $nl }1. The answer is <s>10</s> 4 ⭐ | You have: { $answer }{ $nl }2. x2 to stars (Always valid) - 100 ⭐{$nl}3. Skin for cross and zero - 50 ⭐ or 5🌟{ $nl }{ $nl }Write me the number of what you want to buy{ $nl }{ $nl }Your stars ⭐: <b>{ $score }</b>{ $nl }Your Premium-stars 🌟: <b>{ $premium_stars }</b>
+purchase_completed = ✅ Purchase completed! ✅{$nl}Your stars: {$score} ⭐
+check_the_balance = Not enough stars ⭐! Check out their /score!
+you_already_bought_it = You already bought it!
+basketball_ball = 🏀 Basketball ball 🏀
+soccer_ball = ⚽ Soccer ball ⚽
+volleyball_ball = 🏐 Volleyball ball 🏐
+football_ball = 🏈 Ball for football 🏈
+fire = 🔥 Fire 🔥
+note = 🎵 Note 🎵
+snow = ❄️ Snow ❄️
+sword = ⚔️ Swords ⚔️
+fire_heart = ❤️‍🔥 Fire heart ❤️‍🔥
+purple_heart = 💖 Purple Heart 💖
+table_tennis = 🏓 Table tennis 🏓
+trophy = 🏆 Trophy 🏆
+poo = 💩 Poop 💩
+star = ⭐ Star ⭐
+premium_star = 🌟 Premium star 🌟
+choose_a_skin = Choose a skin:
+you_have_skin = You already have it. Do you want to put /change_skin?
+skin_selected = Skin bought and written off { $sale } ⭐!{$nl}Your stars: {$score} ⭐
+not_enough_stars_shop = Not enough stars ⭐! Check them out /score{$nl}Your stars are {score} ⭐
+
+top_10 = Top-10 chat players:
+only_groups = This command is only available for group chats!
+new_chat_member = Added { $name }
+
+standart = ❌ Standard ⭕
+choose_a_skin_for_ttt = Choose a skin for the game Tic Tac Toe
+skin_selected_change = Skin selected!
+
+buy_successful_not_premium = { $name } thank you for purchasing { $total_amount } { $currency }.{ $nl }You now have a Premium account 👑 check out its features /about_premium
+buy_successful = {$name} thank you for buying { $total_amount } { $currency }.{ $nl }Your stars { $premium_stars }, now with Premium stars 🌟 you can buy more skins for Tic Tac Toe ❌ ⭕
+buy_text_title = Purchase via Mini Games 🤖
+buy_text_descrption_not_premium = Buy Premium stars 🌟{ $nl }Premium account 👑{ $nl }❗❗Payment is non-refundable❗❗
+buy_text_descrption = Buy Premium stars 🌟{ $nl }❗❗Payment is non-refundable❗❗
+buy_text_label1 = Premium stars 🌟 10
+buy_text_label2 = Premium account 👑
+
+about_premium = Advantages of a Premium account:{$nl}• More skins for ❌⭕{$nl}• You will receive Premium stars 🌟{$nl}• You will receive not x2 stars, but x4 🤯
