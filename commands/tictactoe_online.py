@@ -77,7 +77,7 @@ async def tictactoe(message: Message, members_game=members_game):
     # player_1_symbol = ""
     # player_2_symbol = ""
 
-    cursor.execute("UPDATE online SET online = 1 WHERE id = ?", (message.from_user.id,))
+    cursor.execute("UPDATE online_ttt SET online_ttt = 1 WHERE id = ?", (message.from_user.id,))
     conn.commit()
 
     
@@ -88,7 +88,7 @@ async def tictactoe(message: Message, members_game=members_game):
     game_status = True
     if while_status == 1:
         while True:
-            cursor.execute("SELECT online, id FROM online WHERE online = 1")
+            cursor.execute("SELECT online_ttt, id FROM online_ttt WHERE online_ttt = 1")
             online_while = cursor.fetchall()
             
             if len(online_while) > 1:
@@ -109,7 +109,7 @@ async def tictactoe(message: Message, members_game=members_game):
     else:
         pass
 
-    cursor.execute("SELECT online, id FROM online WHERE online = 1")
+    cursor.execute("SELECT online_ttt, id FROM online_ttt WHERE online_ttt = 1")
     idsOpponentsList = cursor.fetchall()
 
     opponents_ids = []
@@ -126,18 +126,18 @@ async def tictactoe(message: Message, members_game=members_game):
     else:
         members_game = []
 
-    cursor.execute("UPDATE online SET opponent_id = ? WHERE id = ?", (opponent_id, my_id,))
+    cursor.execute("UPDATE online_ttt SET opponent_id = ? WHERE id = ?", (opponent_id, my_id,))
     conn.commit()
-    cursor.execute("UPDATE online SET my_id = ? WHERE id = ?", (my_id, my_id,))
+    cursor.execute("UPDATE online_ttt SET my_id = ? WHERE id = ?", (my_id, my_id,))
     conn.commit()
-    cursor.execute("UPDATE online SET opponent_id = ? WHERE id = ?", (opponent_id, opponent_id,))
+    cursor.execute("UPDATE online_ttt SET opponent_id = ? WHERE id = ?", (opponent_id, opponent_id,))
     conn.commit()
-    cursor.execute("UPDATE online SET my_id = ? WHERE id = ?", (my_id, opponent_id,))
+    cursor.execute("UPDATE online_ttt SET my_id = ? WHERE id = ?", (my_id, opponent_id,))
     conn.commit()
 
-    cursor.execute("SELECT opponent_id FROM online WHERE id = ?", (my_id,))
+    cursor.execute("SELECT opponent_id FROM online_ttt WHERE id = ?", (my_id,))
     opponent_id = cursor.fetchone()[0]
-    cursor.execute("SELECT my_id FROM online WHERE id = ?", (my_id,))
+    cursor.execute("SELECT my_id FROM online_ttt WHERE id = ?", (my_id,))
     my_id = cursor.fetchone()[0]
 
     members_game = [opponent_id, my_id]
@@ -165,15 +165,15 @@ async def tictactoe(message: Message, members_game=members_game):
 async def callback_query_button_no(callback: CallbackQuery):  
     global opponent_id, my_id, select_mess_dict
 
-    cursor.execute("SELECT online FROM online WHERE id = ?", (opponent_id,))
+    cursor.execute("SELECT online_ttt FROM online_ttt WHERE id = ?", (opponent_id,))
     online_opponent = cursor.fetchone()[0]
-    cursor.execute("SELECT online FROM online WHERE id = ?", (my_id,))
+    cursor.execute("SELECT online_ttt FROM online_ttt WHERE id = ?", (my_id,))
     online_my = cursor.fetchone()[0]
     if online_opponent == 1 or online_my == 1:
         global members_game, opponent_message, my_message
-        cursor.execute("UPDATE online SET online = 0 WHERE id = ?", (opponent_id,))
+        cursor.execute("UPDATE online_ttt SET online_ttt = 0 WHERE id = ?", (opponent_id,))
         conn.commit()
-        cursor.execute("UPDATE online SET online = 0 WHERE id = ?", (my_id,))
+        cursor.execute("UPDATE online_ttt SET online_ttt = 0 WHERE id = ?", (my_id,))
         conn.commit()
 
         
@@ -196,15 +196,15 @@ async def callback_query_button_yes(callback: CallbackQuery, bot: Bot,
                                     opponent_message=opponent_message):
     global skin_p2_X, skin_p1_X, skin_p1_Zero, skin_p2_Zero, opponent_id, my_id, my_message, mess, button_yes_status, select_mess_dict
 
-    cursor.execute("SELECT online FROM online WHERE id = ?", (opponent_id,))
+    cursor.execute("SELECT online_ttt FROM online_ttt WHERE id = ?", (opponent_id,))
     online_opponent = cursor.fetchone()[0]
-    cursor.execute("SELECT online FROM online WHERE id = ?", (my_id,))
+    cursor.execute("SELECT online_ttt FROM online_ttt WHERE id = ?", (my_id,))
     online_my = cursor.fetchone()[0]
 
     if online_opponent == 1 or online_my == 1:
         list_ids = [opponent_id, my_id]
         for id in list_ids:
-            cursor.execute("UPDATE online SET online = 0 WHERE id = ?", (id,))
+            cursor.execute("UPDATE online_ttt SET online_ttt = 0 WHERE id = ?", (id,))
             conn.commit()
 
         cursor.execute("SELECT skin FROM game WHERE id = ?", (my_id,))

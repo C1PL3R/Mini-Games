@@ -7,8 +7,7 @@ the_language_has_been_changed = The language has been changed
 
 add_bot_to_group = Add bot to group
 start_message = Hello { $user }, there are mini games here that you can play! To play, look in the 'Menu' tab.{ $nl }Add me to a group of friends! More fun together!
-help_message = If you have any questions about what I'm doing, write to @C1PL3R_admin.{ $nl }If you're not in the top, send the /top command (only in groups)!
-
+help_message = If you have any questions about what I'm doing, write to @C1PL3R_admin.{ $nl }If you're not in the top, send the /top command (only in groups)!{ $nl }{ $nl }Rules for the game "Prisoner's Dilemma" 🦹‍♂️{ $nl }There are two buttons "Cooperation" and "Treason" in front of you and your opponent, if you both choose "Cooperation", then both of you will get 3 stars ⭐ if you choose "Cooperation" and the opponent chooses "Treason" , then you get 0 ⭐, and the opponent 5 stars ⭐, and vice versa if you choose "Betrayal" and the opponent "Cooperation", then you will get 5 ⭐, and the opponent zero ⭐, and if you both press "Betrayal", then both will get 1 star ⭐.
 finish_game_cross = You are a cross! Finish the game!!
 finish_game_zero = You circle! Finish the game!!
 choose_who_you_will_be = Choose who you will be?

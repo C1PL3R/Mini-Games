@@ -41,6 +41,7 @@ async def main():
                 (BotCommand(command="tictactoe_online", description="⭕ Tic Tac Toe ❌ ONLINE 🌐")),
                 (BotCommand(command="tictactoe", description="⭕ Tic Tac Toe ❌")),
                 (BotCommand(command="guess_number", description="🎲 Guess the Number 🎲")),
+                (BotCommand(command="prisoner_dilemma", description="Prisoner's dilemma 🦹‍♂️"))
                 (BotCommand(command="luck", description="🎰 Test Your Luck 🎰"))]
 
 

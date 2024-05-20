@@ -37,7 +37,7 @@ with sqlite3.connect("mini_game.db") as conn:
                    star_skin INTEGER DEFAULT 0,
                    premium_star_skin INTEGER DEFAULT 0)""")
     
-    cursor.execute("""CREATE TABLE IF NOT EXISTS online
+    cursor.execute("""CREATE TABLE IF NOT EXISTS online_ttt
                    (id INTEGER,
                    name TEXT,
                    online INTEGER DEFAULT 0,
